@@ -22,10 +22,10 @@ $categories = [
   $catChicken = new Food('Chicken for cats', 44.99, 'img/img3.jpg', $categories['cat'], '400g', ['Chicken']),
   
   // Kong classic
-  $dogToy = new Toy('Kong classic, Dog toy', 13.49, 'img/img6.jpg', $categories['dog'], 'Floats and bounces', '8,5 cm x 10 cm'),
+  $dogToy = new Toy('Kong classic, Dog toy', 13.49, 'img/img4.jpg', $categories['dog'], 'Floats and bounces', '8,5 cm x 10 cm'),
   
   // Topo di peluche
-  $catPlushMouse = new Toy('Plush mouse, Cat toy', 4.99, 'img/img7.jpg', $categories['cat'], 'Soft with rope tail', '8,5 cm x 10 cm'),
+  $catPlushMouse = new Toy('Plush mouse, Cat toy', 4.99, 'img/img5.jpg', $categories['cat'], 'Soft with rope tail', '8,5 cm x 10 cm'),
   
   ];
   
