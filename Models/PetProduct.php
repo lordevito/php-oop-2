@@ -1,9 +1,13 @@
 <?php
 
 require_once __DIR__ . '/Category.php';
+require_once __DIR__ . '/../Traits/Title.php';
 
 class PetProduct {
-  private $title;
+
+  use Title;
+
+  // private $title;
   private $price;
   private $image;
   private $category;
@@ -12,7 +16,7 @@ class PetProduct {
     String $_title, 
     Float $_price, 
     String $_image,
-    Category $_category  
+    Category $_category
   ){
     $this->setTitle   ($_title);
     $this->setPrice   ($_price);
@@ -21,9 +25,9 @@ class PetProduct {
   }
 
   //SET
-  public function setTitle($_title){
-    $this->title = $_title;
-  }
+  // public function setTitle($_title){
+  //   $this->title = $_title;
+  // }
   public function setPrice($_price){
     $this->price = $_price;
   }
@@ -35,14 +39,17 @@ class PetProduct {
   }
   
   //GET
-  public function getTitle(){
-    return $this->title;
-  }
+  // public function getTitle(){
+  //   return $this->title;
+  // }
   public function getPrice(){
     return $this->price;
   }
   //* per ottenere il prezzo con le virgole
-  public function getFormatPrice(){
+  public function getFormatPrice($price){
+    if(is_float($price)){
+      throw new Exception("$price Is not a float number");
+    };
     return number_format($this->price, 2, ',', '.');
   }
   public function getDiscount($_discount){
